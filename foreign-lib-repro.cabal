@@ -1,0 +1,14 @@
+cabal-version:       2.4
+name:                foreign-lib-repro
+version:             0.1.0.0
+build-type:          Simple
+
+foreign-library foreign-lib-repro
+  type:               native-shared
+  hs-source-dirs:     src
+  ghc-options:        -Wall
+  default-language:   Haskell2010
+
+  C-sources:          src/wrapper.c
+  other-modules:      Lib
+  build-depends:      base
